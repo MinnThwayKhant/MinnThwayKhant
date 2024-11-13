@@ -28,15 +28,45 @@
 # Top Languages use
 
 [![Static Badge](https://img.shields.io/badge/PHP-8e188e?style=for-the-badge&logo=php&logoColor=white&labelColor=black)](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=PHP&logoColor=%23777BB4&labelColor=black
-)
-![Static Badge](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=%23FF2D20&labelColor=black)
-
+)![Static Badge](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=%23FF2D20&labelColor=black)
 ![Static Badge](https://img.shields.io/badge/Javascript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=%23F7DF1E&labelColor=black)
 
 ![Static Badge](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=%2361DAFB&labelColor=black)
-
 ![Static Badge](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=HTML5&logoColor=%23E34F26&labelColor=black)
-
 ![Static Badge](https://img.shields.io/badge/CSS-%231572B6?style=for-the-badge&logo=CSS3&logoColor=%231572B6&labelColor=black)
-
 ![Static Badge](https://img.shields.io/badge/MYSQL-4479A1?style=for-the-badge&logo=MySQL&logoColor=%234479A1&labelColor=black&color=%234479A1)
+
+# Steps represent a sequence of tasks that will be executed as part of the job
+steps:
+
+# Checks repo under $GITHUB_WORKSHOP, so your job can access it
+  - uses: actions/checkout@v2
+
+# Generates the snake  
+  - uses: Platane/snk@master
+    id: snake-gif
+    with:
+      github_user_name: mishmanners
+      # these next 2 lines generate the files on a branch called "output". This keeps the main branch from cluttering up.
+      gif_out_path: dist/github-contribution-grid-snake.gif
+      svg_out_path: dist/github-contribution-grid-snake.svg
+
+ # show the status of the build. Makes it easier for debugging (if there's any issues).
+  - run: git status
+
+  # Push the changes
+  - name: Push changes
+    uses: ad-m/github-push-action@master
+    with:
+      github_token: ${{ secrets.GITHUB_TOKEN }}
+      branch: master
+      force: true
+
+  - uses: crazy-max/ghaction-github-pages@v2.1.3
+    with:
+      # the output branch we mentioned above
+      target_branch: output
+      build_dir: dist
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
