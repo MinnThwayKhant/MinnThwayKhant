@@ -27,7 +27,7 @@
 
 # Top Languages use
 
-[![Static Badge](https://img.shields.io/badge/PHP-8e188e?style=for-the-badge&logo=php&logoColor=white&labelColor=black)](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=PHP&logoColor=%23777BB4&labelColor=black
+[![Static Badge](https://img.shields.io/badge/PHP-8e188e?style=for-the-badge&logo=php&logoColor=white&labelColor=black)
 ![Static Badge](https://img.shields.io/badge/Javascript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=%23F7DF1E&labelColor=black)
 
 ![Static Badge](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=%2361DAFB&labelColor=black)
